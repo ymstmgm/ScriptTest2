@@ -18,17 +18,13 @@ public class Test : MonoBehaviour
         array[4] = 50;
 
         // 配列の要素をすべて表示する
-        for (int i = 0; i < 5; i++)
-        {
-            Debug.Log(array[i]);
-        }
+        for (int i = 0; i < array.Length; i++)
+        Debug.Log(array[i]);
 
         // 配列の要素を逆順表示する
         for (int i = array.Length - 1; i >= 0; i--)
-        {
-            Debug.Log(array[i]);
-        }
-
+        Debug.Log(array[i]);
+        
     }
 
     // Update is called once per frame
