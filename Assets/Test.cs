@@ -25,14 +25,19 @@ public class Test : MonoBehaviour
         for (int i = array.Length - 1; i >= 0; i--)
             Debug.Log(array[i]);
 
-        Boss boss = new();
 
-        // 10回繰り返す
-        for (int mp = 0; mp < 11; mp++) ;
-        Debug.Log("mpが足りない。");
+        Boss boss = new();
+        boss.Magic();
+
 
         // magic関数を呼び出す
         boss.Magic();
+
+
+        // 10回繰り返す
+        for (int mp = 0; mp < 11; mp++) ;
+        Debug.Log("mpが足りないため、魔法が使えない。");
+
 
     }
 
@@ -46,21 +51,20 @@ public class Test : MonoBehaviour
         int mp = 53;
         public void Magic()
         {
+
             if (mp >= 5)
             {
                 // mpが5以上だった場合5減らす
                 mp -= 5;
-                Debug.Log(this.mp + "魔法攻撃をした。残り");
+                Debug.Log("魔法攻撃をした。残り" + this.mp);
             }
 
             else
             {
                 // mpが足りない時
-                Debug.Log("mpが足りないため、魔法が使えない。。");
+                Debug.Log("mpが足りないため、魔法が使えない。");
             }
-        }
 
-        
-        
+        }
     }
 }
