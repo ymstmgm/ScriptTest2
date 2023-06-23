@@ -19,32 +19,30 @@ public class Test : MonoBehaviour
 
         // 配列の要素をすべて表示する
         for (int i = 0; i < array.Length; i++)
+        { 
             Debug.Log(array[i]);
+        }
 
         // 配列の要素を逆順表示する
         for (int i = array.Length - 1; i >= 0; i--)
+        { 
             Debug.Log(array[i]);
+        }
 
-
-        Boss boss = new();
-        boss.Magic();
-
-
-        // magic関数を呼び出す
-        boss.Magic();
-
+        Boss boss = new Boss();
 
         // 10回繰り返す
-        for (int mp = 0; mp < 11; mp++) ;
-        Debug.Log("mpが足りないため、魔法が使えない。");
-
+        for (int mp = 0; mp < 11; mp++) 
+        {
+            // magic関数を呼び出して繰り返す
+            boss.Magic();
+        }
 
     }
 
     // Update is called once per frame
     void Update()
-    {
-    }
+    {}
 
     public class Boss
     {
