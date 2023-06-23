@@ -25,12 +25,22 @@ public class Test : MonoBehaviour
         for (int i = array.Length - 1; i >= 0; i--)
             Debug.Log(array[i]);
 
+        Boss boss = new();
+
+        // 10回繰り返す
+        for (int mp = 0; mp < 11; mp++) ;
+        Debug.Log("mpが足りない。");
+
+        // magic関数を呼び出す
+        boss.Magic();
+
     }
+
     // Update is called once per frame
     void Update()
     {
-
     }
+
     public class Boss
     {
         int mp = 53;
@@ -51,22 +61,6 @@ public class Test : MonoBehaviour
         }
 
         
-        public class Test : MonoBehaviour
-        {
-            // Start is called before the first frame update
-            void Start()
-
-            {
-                Boss boss = new();
-
-                // 10回繰り返す
-                for (int mp = 0; mp < 11; mp++) ;
-                Debug.Log("mpが足りない。");
-
-                // magic関数を呼び出す
-                boss.Magic();
-
-            }          
-        }
+        
     }
 }
